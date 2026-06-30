@@ -1,6 +1,31 @@
 ---
 ---
 
-<div>
-  <slot />
+<div class="flex flex-col gap-6">
+  <div class="rounded-2xl border border-gray-100 p-6 bg-white">
+    <span class="text-[10px] font-semibold tracking-[0.15em] text-gray-400 uppercase">Ubicación Actual</span>
+    <p class="text-sm font-medium text-gray-700 mt-1">Río Cuarto, Argentina</p>
+    <div class="flex items-center gap-3 mt-3 pt-3 border-t border-gray-50">
+      <span class="text-2xl font-bold text-gray-900">11:30 AM</span>
+      <span class="text-gray-300">|</span>
+      <span class="text-lg font-semibold text-gray-700">22°C</span>
+      <span class="text-xl">☀️</span>
+    </div>
+  </div>
+
+  <div class="flex items-center justify-between rounded-2xl border border-gray-100 px-5 py-3.5 bg-white">
+    <span class="text-sm text-gray-400">Búsqueda rápida</span>
+    <span class="text-[11px] font-mono font-medium text-gray-400 bg-gray-50 px-2 py-1 rounded-md border border-gray-100">[ CMD + K ]</span>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4">
+    <div class="rounded-2xl border border-gray-100 p-5 bg-white">
+      <span class="text-[10px] font-semibold tracking-[0.15em] text-gray-400 uppercase">Proyectos</span>
+      <p class="text-3xl font-extrabold text-gray-900 mt-1">12+</p>
+    </div>
+    <div class="rounded-2xl border border-blue-100 p-5 bg-blue-50/50">
+      <span class="text-[10px] font-semibold tracking-[0.15em] text-blue-600 uppercase">Uptime</span>
+      <p class="text-3xl font-extrabold text-blue-600 mt-1">99.9%</p>
+    </div>
+  </div>
 </div>
