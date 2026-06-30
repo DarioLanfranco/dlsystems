@@ -1,44 +1,44 @@
 ---
 ---
 
-<section class="py-20 px-8 max-w-7xl mx-auto">
+<section class="py-20 px-8 max-w-7xl mx-auto" data-simulator>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
     <div class="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
       <span class="text-xs font-semibold tracking-[0.15em] text-blue-600 uppercase">Simulador de Ahorro</span>
       <h2 class="text-3xl font-extrabold text-gray-900 mt-3">¿Cuánto podés ahorrar?</h2>
       <p class="text-sm text-gray-500 mt-2">Ajustá los valores según tu negocio y calculá tu ROI estimado.</p>
 
-      <div class="mt-8 flex flex-col gap-7">
-        <div>
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-sm font-medium text-gray-700">Pedidos / mes</span>
-            <span class="text-sm font-bold text-blue-600">340</span>
-          </div>
-          <div class="h-2 w-full rounded-full bg-gray-100">
-            <div class="h-2 w-[70%] rounded-full bg-blue-600" />
-          </div>
-        </div>
+      <div class="mt-6 flex items-center gap-2" data-rubro-group>
+        <button data-rubro="gastronomia" data-active="true" class="flex-1 rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-600 transition-all data-[active=true]:border-blue-600 data-[active=true]:bg-blue-600 data-[active=true]:text-white">Gastronomía</button>
+        <button data-rubro="comercio" class="flex-1 rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-600 transition-all data-[active=true]:border-blue-600 data-[active=true]:bg-blue-600 data-[active=true]:text-white">Comercio</button>
+        <button data-rubro="servicios" class="flex-1 rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-600 transition-all data-[active=true]:border-blue-600 data-[active=true]:bg-blue-600 data-[active=true]:text-white">Servicios</button>
+      </div>
 
+      <div class="mt-8 flex flex-col gap-8">
         <div>
           <div class="flex items-center justify-between mb-2">
-            <span class="text-sm font-medium text-gray-700">Horas admin. / semana</span>
-            <span class="text-sm font-bold text-blue-600">12 h</span>
+            <span class="text-sm font-medium text-gray-700" data-slider1-label>Pedidos por mes</span>
+            <span class="text-sm font-bold text-blue-600" data-slider1-value>300</span>
           </div>
-          <div class="h-2 w-full rounded-full bg-gray-100">
-            <div class="h-2 w-[40%] rounded-full bg-blue-600" />
-          </div>
+          <input type="range" data-slider1 min="0" max="1000" value="300" step="1" class="w-full h-2 rounded-full appearance-none cursor-pointer bg-gray-100 accent-blue-600 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-blue-600 [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:cursor-pointer" />
         </div>
-
         <div>
           <div class="flex items-center justify-between mb-2">
-            <span class="text-sm font-medium text-gray-700">Errores de stock / mes</span>
-            <span class="text-sm font-bold text-blue-600">8</span>
+            <span class="text-sm font-medium text-gray-700" data-slider2-label>Horas respondiendo WhatsApp / semana</span>
+            <span class="text-sm font-bold text-blue-600" data-slider2-value>10</span>
           </div>
-          <div class="h-2 w-full rounded-full bg-gray-100">
-            <div class="h-2 w-[25%] rounded-full bg-blue-600" />
-          </div>
+          <input type="range" data-slider2 min="0" max="40" value="10" step="1" class="w-full h-2 rounded-full appearance-none cursor-pointer bg-gray-100 accent-blue-600 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-blue-600 [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:cursor-pointer" />
         </div>
       </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-medium text-gray-700">Errores manuales / mes</span>
+            <span class="text-sm font-bold text-blue-600" data-slider3-value>3</span>
+          </div>
+          <p class="text-[11px] text-gray-400 mb-2 -mt-1">pedidos mal anotados, stock que falta</p>
+          <input type="range" data-slider3 min="0" max="20" value="3" step="1" class="w-full h-2 rounded-full appearance-none cursor-pointer bg-gray-100 accent-blue-600 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-blue-600 [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:cursor-pointer" />
+        </div>
 
       <div class="mt-8 rounded-xl border border-blue-100 bg-blue-50/60 p-6">
         <div class="flex items-center justify-between">
@@ -46,7 +46,13 @@
             <span class="text-[10px] font-semibold tracking-[0.15em] text-blue-700 uppercase">Ahorro Estimado / Mes</span>
             <p class="text-[11px] text-gray-500 mt-0.5">Basado en tus datos</p>
           </div>
-          <span class="text-3xl font-extrabold text-blue-600">$48.200</span>
+          <span class="text-3xl font-extrabold text-blue-600" data-savings>$48.200</span>
+        </div>
+        <button data-explicar class="mt-3 flex items-center gap-1.5 text-[11px] font-medium text-blue-600 hover:text-blue-700 transition-colors">
+          <span>💡</span> Te explico de dónde sale este dinero
+        </button>
+        <div data-breakdown class="mt-3 rounded-lg bg-gray-50 border border-gray-100 p-4 text-xs text-gray-600 leading-relaxed hidden">
+          <p data-breakdown-text />
         </div>
       </div>
     </div>
@@ -64,13 +70,10 @@
           <div class="flex-1 min-w-0">
             <p class="text-sm font-bold text-gray-900">Performance Score</p>
             <p class="text-xs text-gray-500 truncate">Tiempo de carga promedio · Lighthouse Audit</p>
-            <div class="mt-2 h-1.5 w-full rounded-full bg-gray-100">
-              <div class="h-1.5 w-full rounded-full bg-green-500" />
-            </div>
+            <div class="mt-2 h-1.5 w-full rounded-full bg-gray-100"><div class="h-1.5 w-full rounded-full bg-green-500" /></div>
           </div>
           <span class="shrink-0 rounded-md bg-green-50 px-2.5 py-1 text-[10px] font-semibold text-green-700">Óptimo</span>
         </div>
-
         <div class="flex items-center gap-4 rounded-xl border border-gray-100 p-4">
           <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-green-50">
             <span class="text-sm font-extrabold text-green-600">98</span>
@@ -78,13 +81,10 @@
           <div class="flex-1 min-w-0">
             <p class="text-sm font-bold text-gray-900">Accessibility</p>
             <p class="text-xs text-gray-500 truncate">WCAG 2.1 AA · Usable en cualquier dispositivo</p>
-            <div class="mt-2 h-1.5 w-full rounded-full bg-gray-100">
-              <div class="h-1.5 w-[98%] rounded-full bg-green-500" />
-            </div>
+            <div class="mt-2 h-1.5 w-full rounded-full bg-gray-100"><div class="h-1.5 w-[98%] rounded-full bg-green-500" /></div>
           </div>
           <span class="shrink-0 rounded-md bg-green-50 px-2.5 py-1 text-[10px] font-semibold text-green-700">AA</span>
         </div>
-
         <div class="flex items-center gap-4 rounded-xl border border-gray-100 p-4">
           <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-50">
             <span class="text-sm font-extrabold text-blue-600">100</span>
@@ -92,13 +92,10 @@
           <div class="flex-1 min-w-0">
             <p class="text-sm font-bold text-gray-900">SEO Optimizado</p>
             <p class="text-xs text-gray-500 truncate">Indexación completa · Google Search Ready</p>
-            <div class="mt-2 h-1.5 w-full rounded-full bg-gray-100">
-              <div class="h-1.5 w-full rounded-full bg-blue-500" />
-            </div>
+            <div class="mt-2 h-1.5 w-full rounded-full bg-gray-100"><div class="h-1.5 w-full rounded-full bg-blue-500" /></div>
           </div>
           <span class="shrink-0 rounded-md bg-blue-50 px-2.5 py-1 text-[10px] font-semibold text-blue-700">Top Score</span>
         </div>
-
         <div class="flex items-center gap-4 rounded-xl border border-gray-100 p-4">
           <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-green-50">
             <span class="text-sm font-extrabold text-green-600">99.9</span>
@@ -106,9 +103,7 @@
           <div class="flex-1 min-w-0">
             <p class="text-sm font-bold text-gray-900">Uptime / Disponibilidad</p>
             <p class="text-xs text-gray-500 truncate">Monitoreado 24/7 · Infraestructura cloud</p>
-            <div class="mt-2 h-1.5 w-full rounded-full bg-gray-100">
-              <div class="h-1.5 w-[99.9%] rounded-full bg-green-500" />
-            </div>
+            <div class="mt-2 h-1.5 w-full rounded-full bg-gray-100"><div class="h-1.5 w-[99.9%] rounded-full bg-green-500" /></div>
           </div>
           <span class="shrink-0 rounded-md bg-green-50 px-2.5 py-1 text-[10px] font-semibold text-green-700">Estable</span>
         </div>
@@ -116,3 +111,5 @@
     </div>
   </div>
 </section>
+
+<script src="../../scripts/simulator.js"></script>
