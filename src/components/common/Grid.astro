@@ -1,0 +1,12 @@
+---
+export interface Props {
+  cols?: 1 | 2 | 3 | 4
+  class?: string
+}
+
+const { cols = 1, class: className } = Astro.props
+---
+
+<div class={className}>
+  <slot />
+</div>
