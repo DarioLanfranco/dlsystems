@@ -1,17 +1,11 @@
 ---
 import NavLogo from './NavLogo.astro'
 import NavLinks from './NavLinks.astro'
-import NavButton from './NavButton.astro'
 import OnlineIndicator from './OnlineIndicator.astro'
-import MobileMenu from './MobileMenu.astro'
-import MobileMenuButton from './MobileMenuButton.astro'
 ---
 
-<nav>
+<nav class="flex items-center justify-between px-8 py-5 max-w-7xl mx-auto">
   <NavLogo />
   <NavLinks />
-  <NavButton />
   <OnlineIndicator />
-  <MobileMenuButton />
-  <MobileMenu />
 </nav>

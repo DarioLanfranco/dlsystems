@@ -1,9 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import Navbar from '../components/navigation/Navbar.astro'
+import HeroSection from '../components/hero/HeroSection.astro'
+import HeroIllustration from '../components/hero/HeroIllustration.astro'
 ---
 
-<BaseLayout title="DL Systems - Base Structure Ready">
-  <main class="min-h-screen flex items-center justify-center">
-    <h1 class="text-4xl font-bold tracking-tight">DL Systems Base Structure Ready</h1>
-  </main>
+<BaseLayout title="DL Systems - Software Simple. Resultados Reales.">
+  <Navbar />
+  <HeroSection>
+    <HeroIllustration slot="widgets" />
+  </HeroSection>
 </BaseLayout>
