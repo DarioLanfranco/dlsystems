@@ -1,4 +1,6 @@
 ---
+import ClockWidget from '../widgets/ClockWidget.astro'
+import WeatherWidget from '../widgets/WeatherWidget.astro'
 ---
 
 <div class="flex flex-col gap-6">
@@ -6,10 +8,9 @@
     <span class="text-[10px] font-semibold tracking-[0.15em] text-gray-400 uppercase">Ubicación Actual</span>
     <p class="text-sm font-medium text-gray-700 mt-1">Río Cuarto, Argentina</p>
     <div class="flex items-center gap-3 mt-3 pt-3 border-t border-gray-50">
-      <span class="text-2xl font-bold text-gray-900">11:30 AM</span>
+      <ClockWidget />
       <span class="text-gray-300">|</span>
-      <span class="text-lg font-semibold text-gray-700">22°C</span>
-      <span class="text-xl">☀️</span>
+      <WeatherWidget />
     </div>
   </div>
 

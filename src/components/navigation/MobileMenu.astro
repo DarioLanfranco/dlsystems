@@ -1,6 +1,9 @@
 ---
 ---
 
-<div id="mobile-menu">
+<div
+  data-menu-overlay
+  class="fixed inset-0 z-50 flex flex-col bg-white/95 backdrop-blur-sm invisible opacity-0 transition-all duration-300"
+>
   <slot />
 </div>
