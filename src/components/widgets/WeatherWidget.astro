@@ -1,6 +1,20 @@
 ---
 ---
 
-<div id="weather-widget">
-  <slot />
+<div class="flex items-center gap-3">
+  <span class="text-lg font-semibold text-gray-700" data-weather-temp>22°C</span>
+  <span class="text-xl" data-weather-icon>☀️</span>
 </div>
+<div class="mt-3 pt-3 border-t border-gray-50 flex items-center gap-4 text-xs font-medium text-gray-500" data-weather-days>
+  <span data-day-1>
+    <span data-day-name-1>Mié</span> <span data-day-icon-1>☀️</span> <span data-day-temp-1>4°/16°</span>
+  </span>
+  <span data-day-2>
+    <span data-day-name-2>Jue</span> <span data-day-icon-2>☁️</span> <span data-day-temp-2>8°/21°</span>
+  </span>
+  <span data-day-3>
+    <span data-day-name-3>Vie</span> <span data-day-icon-3>🌧️</span> <span data-day-temp-3>12°/18°</span>
+  </span>
+</div>
+
+<script src="../../scripts/weather.js"></script>

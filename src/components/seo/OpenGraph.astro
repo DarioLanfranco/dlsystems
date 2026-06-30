@@ -9,4 +9,8 @@ export interface Props {
 const { title, description, image, url } = Astro.props
 ---
 
-<slot />
+{title && <meta property="og:title" content={title} />}
+{description && <meta property="og:description" content={description} />}
+{image && <meta property="og:image" content={image} />}
+{url && <meta property="og:url" content={url} />}
+<meta property="og:type" content="website" />
