@@ -1,0 +1,1 @@
+// Copy email to clipboard

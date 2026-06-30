@@ -1,0 +1,12 @@
+---
+export interface Props {
+  variant?: "default" | "success" | "warning" | "danger"
+  class?: string
+}
+
+const { variant = "default", class: className } = Astro.props
+---
+
+<span class={className}>
+  <slot />
+</span>
