@@ -1,6 +1,60 @@
 ---
 ---
 
-<div id="lighthouse-widget">
-  <slot />
+<div class="flex flex-col gap-4">
+  <div class="flex items-center gap-4 rounded-xl border border-gray-100 p-4 bg-white">
+    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-green-50">
+      <span class="text-sm font-extrabold text-green-600">100</span>
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="text-sm font-bold text-gray-900">Performance Score</p>
+      <p class="text-xs text-gray-500 truncate">Tiempo de carga promedio · Lighthouse Audit</p>
+      <div class="mt-2 h-1.5 w-full rounded-full bg-gray-100">
+        <div class="h-1.5 w-full rounded-full bg-green-500" />
+      </div>
+    </div>
+    <span class="shrink-0 rounded-md bg-green-50 px-2.5 py-1 text-[10px] font-semibold text-green-700">Óptimo</span>
+  </div>
+
+  <div class="flex items-center gap-4 rounded-xl border border-gray-100 p-4 bg-white">
+    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-green-50">
+      <span class="text-sm font-extrabold text-green-600">98</span>
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="text-sm font-bold text-gray-900">Accessibility</p>
+      <p class="text-xs text-gray-500 truncate">WCAG 2.1 AA · Usable en cualquier dispositivo</p>
+      <div class="mt-2 h-1.5 w-full rounded-full bg-gray-100">
+        <div class="h-1.5 w-[98%] rounded-full bg-green-500" />
+      </div>
+    </div>
+    <span class="shrink-0 rounded-md bg-green-50 px-2.5 py-1 text-[10px] font-semibold text-green-700">AA</span>
+  </div>
+
+  <div class="flex items-center gap-4 rounded-xl border border-gray-100 p-4 bg-white">
+    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-50">
+      <span class="text-sm font-extrabold text-blue-600">100</span>
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="text-sm font-bold text-gray-900">SEO Optimizado</p>
+      <p class="text-xs text-gray-500 truncate">Indexación completa · Google Search Ready</p>
+      <div class="mt-2 h-1.5 w-full rounded-full bg-gray-100">
+        <div class="h-1.5 w-full rounded-full bg-blue-500" />
+      </div>
+    </div>
+    <span class="shrink-0 rounded-md bg-blue-50 px-2.5 py-1 text-[10px] font-semibold text-blue-700">Top Score</span>
+  </div>
+
+  <div class="flex items-center gap-4 rounded-xl border border-gray-100 p-4 bg-white">
+    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-green-50">
+      <span class="text-sm font-extrabold text-green-600">99.9</span>
+    </div>
+    <div class="flex-1 min-w-0">
+      <p class="text-sm font-bold text-gray-900">Uptime / Disponibilidad</p>
+      <p class="text-xs text-gray-500 truncate">Monitoreado 24/7 · Infraestructura cloud</p>
+      <div class="mt-2 h-1.5 w-full rounded-full bg-gray-100">
+        <div class="h-1.5 w-[99.9%] rounded-full bg-green-500" />
+      </div>
+    </div>
+    <span class="shrink-0 rounded-md bg-green-50 px-2.5 py-1 text-[10px] font-semibold text-green-700">Estable</span>
+  </div>
 </div>
